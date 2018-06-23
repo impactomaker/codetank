@@ -77,7 +77,7 @@ Overlay.PAGES = {
       .p('Insira seu nome para começar seus testes:')
       .text('name')
       .p('Clique em "Salvar" quando terminar.')
-      .button('Save', saveCmd);
+      .button('Salvar', saveCmd);
   },
   
   'welcome': function(p) {
@@ -112,40 +112,41 @@ Overlay.PAGES = {
     }
     levels += '</table>';
     
-    p.h1('Select a Level')
-      .p('Click on a level number to begin.')
+    p.h1('Selecione um nível')
+      .p('Usuario: ' + app.settings.get('name'))
+      .p('Clique em um nível para começar')
       .html(levels)
-      .p('<i>Higher numbers are harder</i>');
+      .p('<i>Números mais altos são mais difíceis</i>');
   },
   
   'win': function(p) {
-    p.h1('You Win!!!')
-      .p('Congratulations!  See if you can beat the next level!')
-      .button('Next Level', "app.overlay.displayPage('select-level');");
+    p.h1('Você venceu!!!')
+      .p('Parabéns! Vamos ver se você vence o próximo...')
+      .button('Próximo nível', "app.overlay.displayPage('select-level');");
   },
   
   'lose': function(p) {
-    p.h1('Try Again')
-      .p('You did not destroy the base - keep working on your program and try again!')
-      .button('Retry', 'app.resetLevel()')
-      .button('Select Level', "app.overlay.displayPage('select-level');");
+    p.h1('Tente Novamente')
+      .p('Você não destruiu a base, continue trabalhando no seu programa e tente novamente!')
+      .button('Tentar novamente', 'app.resetLevel()')
+      .button('Selecionar o nível', "app.overlay.displayPage('select-level');");
   },
   
   'help-programming': function(p) {
-    p.h1('Programming Help')
-      .p('To program your tank, you must enter a series of commands, one per line, in the "Program" box on the right of the screen.')
-      .p('You may choose from the following commands:')
-      .indent('<b>move</b>: moves the tank forward one square')
-      .indent('<b>right</b>: turn right 90 degrees')
-      .indent('<b>left</b>: turn left 90 degrees')
-      .indent('<b>wait</b>: wait a turn')
-      .indent('<b>fire</b>: fire your gun - the bullet will travel until it hits something')
-      .p('Commands can be repeated multiple times by adding a count like so: <b>move(3)</b>')
-      .button('Close', "app.overlay.hide();");
+    p.h1('Ajuda do Code Commander')
+      .p('Para programar seu tanque, você deve inserir uma série de comandos, um por linha, na caixa "Console" à direita da tela.')
+      .p('Você pode escolher entre os seguintes comandos:')
+      .indent('<b>move</b>: move o tanque para frente um quadrado')
+      .indent('<b>right</b>: vire à direita 90 graus')
+      .indent('<b>left</b>: vire à esquerda 90 graus')
+      .indent('<b>wait</b>: espere uma vez')
+      .indent('<b>fire</b>: disparar sua arma - a bala vai viajar até atingir algo')
+      .p('Os comandos podem ser repetidos várias vezes adicionando uma contagem como parâmentro assim:  <b>move(3)</b>')
+      .button('Fechar', "app.overlay.hide();");
   },
   
   'about': function(p) {
-    p.h1('About Code Commander')
+    p.h1('Sobre o Code Commander')
       .p('This program is the personal project of Rob Morris of <a href="http://irongaze.com" target="_blank">Irongaze Consulting</a>.')
       .p('It is written in pure Javascript, using <a href="http://jquery.com" target="_blank">jQuery</a>, <a href="http://craftyjs.com" target="_blank">CraftyJS</a> ' +
          'and <a href="http://schillmania.com/projects/soundmanager2/" target="_blank">SoundManager 2</a>.')
