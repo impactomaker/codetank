@@ -73,22 +73,22 @@ Overlay.PAGES = {
   'enter-name': function(p) {
     var saveCmd = "app.settings.set('name', $('#name').val());app.overlay.displayPage('welcome');";
     
-    p.h1('Welcome Commander')
-      .p('Enter your name to begin your tests:')
+    p.h1('Bem vindo ao Impacto Maker - Code Commander')
+      .p('Insira seu nome para começar seus testes:')
       .text('name')
-      .p('Click "Save" when you are done.')
+      .p('Clique em "Salvar" quando terminar.')
       .button('Save', saveCmd);
   },
   
   'welcome': function(p) {
-    p.h1('Welcome ' + app.settings.get('name') + '!')
-      .p('In this game, you command a robot tank that must destroy the enemy base.')
-      .p('To do this, you must write a program to move and shoot your way through each level.')
-      .p('You may use the following commands, one per line:')
-      .indent('<b>move, left, right, fire, wait</b>')
-      .p('Once you have written your program, click the "Run Program" button to see if it works!')
-      .p('There are lots of levels.  You can select any level to play with the "Select Level" button below or under the program window on the right.')
-      .button('Select Level', "app.overlay.displayPage('select-level');");
+    p.h1('Seja bem vindo(a) ' + app.settings.get('name') + '!')
+      .p('Neste jogo, você dvai comandar um tanque robô que deve destruir a base inimiga. Mas para fazer isso você deverá escrever um programa com os comandos necessarios para se mover e disparar a cada nível. Você poder usar os seguinte comandos:')
+      .indent('<b>move | left | right | fire | wait</b>')
+      .p('Que são: mover, esquerda, direita, disparar, esperar.')
+      .p('Depois de ter escrito o seu programa, clique no botão "Executar programa" para ver se funciona!')
+      .p('<b>Os níveis introdutórios são somente para diversão porém os nívels que estão em "Beginner" podem garantir a você um desconto na colônia de férias!</b>')
+      .p('<b>Clique no botão "Selecionar Nível" e complete os desafios em "Beginner". Também não esqueça de ler as regras para validar o desafio.</b>')
+      .button('Selecionar Nível', "app.overlay.displayPage('select-level');");
   },
   
   'select-level': function(p) {
