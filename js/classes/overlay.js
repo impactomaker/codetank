@@ -142,6 +142,7 @@ Overlay.PAGES = {
       .indent('<b>wait</b>: espere uma vez')
       .indent('<b>fire</b>: disparar sua arma - a bala vai viajar até atingir algo')
       .p('Os comandos podem ser repetidos várias vezes adicionando uma contagem como parâmentro assim:  <b>move(3)</b>')
+      .p('Para mais informações, <a target="_blank" href="https://github.com/impactomaker/impactomaker.github.io">Clique Aqui</a> e leia o README do jogo. :)')
       .button('Fechar', "app.overlay.hide();");
   },
   
