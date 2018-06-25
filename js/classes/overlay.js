@@ -82,7 +82,7 @@ Overlay.PAGES = {
   
   'welcome': function(p) {
     p.h1('Seja bem vindo(a) ' + app.settings.get('name') + '!')
-      .p('Neste jogo, você dvai comandar um tanque robô que deve destruir a base inimiga. Mas para fazer isso você deverá escrever um programa com os comandos necessarios para se mover e disparar a cada nível. Você poder usar os seguinte comandos:')
+      .p('Neste jogo, você vai comandar um tanque robô que deve destruir a base inimiga. Mas para fazer isso você deverá escrever um programa com os comandos necessários para se mover e disparar a cada nível. Você poder usar os seguinte comandos:')
       .indent('<b>move | left | right | fire | wait</b>')
       .p('Que são: mover, esquerda, direita, disparar, esperar.')
       .p('Depois de ter escrito o seu programa, clique no botão "Executar programa" para ver se funciona!')
